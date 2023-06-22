@@ -7,17 +7,22 @@
  * return: the sum of all numbers - number
  */
 
+// filter number type items, then reduce
 
 type StringsAndNumbersArr = (string | number)[]
 
 
 function calculateSum(arr:StringsAndNumbersArr): number {
-    
-    let result = arr.reduce((accumlator, currentValue) =>
-        (typeof currentValue === Number) ? accumlator + currentValue : 0
-    )
+
+    let filteredArr: any[] = arr.filter(isNumber)
+    let result = filteredArr.reduce((acc, currVal) => acc + currVal, 0) 
 
     return result;
 }
 
-export {calculateSum};
+// function that returns true if an item is of type Number
+function isNumber(value: string | number): boolean {
+    return typeof value === 'number'
+}
+
+export {calculateSum, isNumber};
