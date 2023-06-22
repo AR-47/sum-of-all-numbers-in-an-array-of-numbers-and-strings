@@ -7,8 +7,6 @@
  * return: the sum of all numbers - number
  */
 
-// filter number type items, then reduce
-
 type StringsAndNumbersArr = (string | number)[]
 
 
@@ -20,7 +18,7 @@ function calculateSum(arr:StringsAndNumbersArr): number {
     return result;
 }
 
-// function that returns true if an item is of type Number
+// function that returns true if an input value is of type Number, otherwise, returns false
 function isNumber(value: string | number): boolean {
     return typeof value === 'number'
 }

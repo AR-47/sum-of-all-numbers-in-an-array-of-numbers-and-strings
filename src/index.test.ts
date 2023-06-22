@@ -9,6 +9,7 @@ test('calculateSum returns correct sum for input array containing numbers and st
     expect(calculateSum([1,2,'3'])).toEqual(3);
     expect(calculateSum([1,2.5,'hello', 'world'])).toEqual(3.5);
     expect(calculateSum([1,2, 456,'hello', 'world'])).toEqual(459);
+    expect(calculateSum(['old', 10, 20, 'pond', -5, -3])).toEqual(22);
 })
 
 test('calculateSum returns correct sum for input array containing negative numbers', () => {
